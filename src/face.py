@@ -26,7 +26,8 @@ class FaceRepository:
     src_folder = "models/"
 
     def __init__(self):
-        pass
+        if not os.path.exists(self.src_folder):
+            os.makedirs(self.src_folder)
 
     def _get_model_dir(self):
         """
